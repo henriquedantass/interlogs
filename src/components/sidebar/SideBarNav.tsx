@@ -5,11 +5,11 @@ import { NavSection } from "./NavSection";
 
 export function SideBarNav(){
   return (
-    <Stack spacing='12' align='flex-start'>
+    <Stack align='flex-start'>
         <NavSection >
           <NavLink href = "/dashboard" icon={RiDashboardLine}>Dashboard</NavLink>  
-          <NavLink href="/users" icon={RiContactsLine}>Equipamentos</NavLink>
-          <NavLink href="/users" icon={RiContactsLine}>Configurações</NavLink>
+          <NavLink href="/users" icon={RiDashboardLine}>Equipamentos</NavLink>
+          <NavLink href="/users" icon={RiDashboardLine}>Configurações</NavLink>
         </NavSection>
     </Stack>
   );

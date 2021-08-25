@@ -10,7 +10,7 @@ interface NavSectionProps {
 export function NavSection({children}:NavSectionProps){
   return (
     <Box mt='5'>
-          <Stack spacing='4' mt='8' align='stretch'>
+          <Stack spacing='8' mt='8' align='stretch'>
             {children}
           </Stack>
     </Box>
