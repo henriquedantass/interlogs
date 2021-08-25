@@ -16,7 +16,7 @@ const options = {
     }
   },
   stroke: {
-    curve: 'straight'
+    curve: 'smooth'
   },
   zoom: {
     enabled: false,
