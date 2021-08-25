@@ -1,0 +1,60 @@
+const dataTable = [
+  {
+    id: 1,
+    description: 'Temperatura do Mancal',
+    tag: 'TT-01',
+    metricUnity: 'ºC',
+    equipment: 'Turbina',
+    switchValue: false,
+  },
+  {
+    id: 2,
+    description: 'Temperatura do Mancal',
+    tag: 'TT-01',
+    metricUnity: 'ºC',
+    equipment: 'Turbina',
+    switchValue: false,
+  },
+  {
+    id: 3,
+    description: 'Temperatura do Mancal',
+    tag: 'TT-01',
+    metricUnity: 'ºC',
+    equipment: 'Turbina',
+    switchValue: false,
+  },
+  {
+    id: 4,
+    description: 'Temperatura do Mancal',
+    tag: 'TT-01',
+    metricUnity: 'ºC',
+    equipment: 'Turbina',
+    switchValue: false,
+  },
+  {
+    id: 5,
+    description: 'Temperatura do Mancal',
+    tag: 'TT-01',
+    metricUnity: 'ºC',
+    equipment: 'Turbina',
+    switchValue: false,
+  },
+  {
+    id: 6,
+    description: 'Temperatura do Mancal',
+    tag: 'TT-01',
+    metricUnity: 'ºC',
+    equipment: 'Turbina',
+    switchValue: false,
+  },
+  {
+    id: 7,
+    description: 'Temperatura do Mancal',
+    tag: 'TT-01',
+    metricUnity: 'ºC',
+    equipment: 'Turbina',
+    switchValue: false,
+  },
+]
+
+export { dataTable };
