@@ -6,9 +6,6 @@ const Chart = dynamic(() => import ('react-apexcharts'), { ssr: false})
 
 const options = {
   chart: {
-    toolbar: {
-      show: false,
-    },
     height: 100,
     type: 'line',
     zoom: {
@@ -28,7 +25,7 @@ const options = {
     enabled: false,
   },
   tooltip: {
-    enabled: false,
+    enabled: true,
   },
   yaxis: {
     min: 0,
