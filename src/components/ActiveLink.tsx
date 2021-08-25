@@ -25,7 +25,7 @@ export function  ActiveLink({ shoudMathExactHref = false ,children, ...rest}:Act
   return (
     <Link {...rest}>
       {cloneElement(children, {
-        color: isActive ? 'pink.400' : 'gray.80'
+        color: isActive ? 'black.100' : 'gray.80'
       })}
     </Link>
   );

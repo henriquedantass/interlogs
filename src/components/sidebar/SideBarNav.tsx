@@ -7,9 +7,9 @@ export function SideBarNav(){
   return (
     <Stack align='flex-start'>
         <NavSection >
-          <NavLink href = "/dashboard" icon={RiDashboardLine}>Dashboard</NavLink>  
-          <NavLink href="/users" icon={RiDashboardLine}>Equipamentos</NavLink>
-          <NavLink href="/users" icon={RiDashboardLine}>Configurações</NavLink>
+          <NavLink href = "/" icon={RiDashboardLine}>Dashboard</NavLink>  
+          <NavLink href="/" icon={RiDashboardLine}>Equipamentos</NavLink>
+          <NavLink href="/" icon={RiDashboardLine}>Configurações</NavLink>
         </NavSection>
     </Stack>
   );

@@ -8,7 +8,7 @@ export function Header () {
         <Img  objectFit="contain" fit='cover' w='fit-content' src='/assets/logo.jpg'/>
         <HStack>
           <Text fontFamily='Roboto' fontWeight='500' >Allan Silva</Text>
-          <Avatar name='Allan Silva'/>
+          <Avatar src= '/assets/avatar.jpg'name='Allan Silva'/>
         </HStack>
       </Flex>
     )
