@@ -22,6 +22,8 @@ export function DashHeader(){
       <HStack spacing='20'>
         {options.map(option => (
           <Box 
+          key={option.name}
+          cursor='pointer'
           onClick={() => setactiveOption(option.name)}
           borderBottom = {option.name === activeOption ? '3px solid #48BB78' : ''}
           w='fit-content'
