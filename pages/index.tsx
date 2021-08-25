@@ -7,9 +7,9 @@ const Home: NextPage = () => {
   return (
     <Flex flexDir='column' h='100vh'> 
        <Header /> 
-      <Flex w='100%'  mx='auto' px='6' bg='blue.50'>
+      <Flex w='100%'  mx='auto'>
         <SideBar/> 
-         <Box bg='green.50' w='100%'></Box> 
+         <Box bg='green.50' w='100%' ></Box> 
       </Flex>
     </Flex>
   )
