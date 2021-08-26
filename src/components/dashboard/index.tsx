@@ -13,7 +13,7 @@ export function Dashboard() {
       pb="2rem"
       bg="gray.50"
     >
-      <Stack spacing="20">
+      <Stack spacing="10">
         <DashHeader />
         <Graphics />
       </Stack>

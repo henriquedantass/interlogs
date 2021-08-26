@@ -1,9 +1,16 @@
+import { Button } from '@chakra-ui/react';
 import dynamic from 'next/dynamic'
+import { useContext } from 'react';
+import {dataContext} from '../../context/dataContext'
 
 const Chart = dynamic(() => import ('react-apexcharts'), { ssr: false}) 
 
 
 
+export function Graphics(){
+  const {data} = useContext(dataContext);
+
+  
 const options = {
   chart: {
     height: 100,
@@ -18,18 +25,61 @@ const options = {
   zoom: {
     enabled: false,
   },
+  tooltip: {
+    y: [
+      {
+        title: {
+          formatter: function (val:any) {
+            return val + " (°C)"
+          }
+        }
+      },
+      {
+        title: {
+          formatter: function (val:any) {
+            return val + " (°C)"
+          }
+        }
+      },
+      {
+        title: {
+          formatter: function (val:any) {
+            return val + " (°C)"
+          }
+        }
+      },
+      
+    ]
+  },
+  legend: {
+    markers: {
+      width: 20,
+      height: 20,
+    },
+    fontFamily: 'Roboto',
+    fontSize: '18px',
+    fontWeight: 500,
+    itemMargin: {
+      horizontal: 20,
+      vertical: 20,
+    },
+    show: true,
+    onItemClick: {
+      toggleDataSeries: true,
+    },
+  },
   grid: {
     show: true,
   },
   dataLabels: {
     enabled: false,
   },
-  tooltip: {
-    enabled: true,
-  },
   yaxis: {
     min: 0,
-    max: 100
+    max: 100,
+    title: {
+      text: 'Temperatura Mancal'
+    },
   },
   xaxis: {
     categories: [
@@ -63,24 +113,17 @@ const options = {
   
 };
 
-const series = [
-  {
-    name: 'Maquina 1' , data: [30,23,50,15,23,20,100, 0,70,13,51,13,13,44,56,11,32,45,11,22,31,23,11,23]
-  },
-  {
-    name: 'Maquina 2' , data: [31,53,12,12,12,20,0, 11,30,11,21,23,34,44,65,11,32,75,11,22,13,23,11,22]
 
-  },
-  {
-    name: 'Maquina 3' , data: [31,56,30,97,60,20,56, 20,30,54,65,23,56,78,56,11,32,45,11,86,31,32,11,23]
-
-  }
-];
+const series = data;
 
 
-export function Graphics(){
   return (
     <Chart type='line' height={400} options={options} series={series}/>
-
   )
 }
+
+
+//remover e adicionar o array para as series
+
+
+

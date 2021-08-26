@@ -19,7 +19,7 @@ export function DashHeader(){
   return (
     <Flex flexDir='column' >
       <Text fontSize='2rem' fontWeight='700' mb='20px'>Dashboard</Text>
-      <HStack spacing='20'>
+      <HStack spacing='10'>
         {options.map(option => (
           <Box 
           key={option.name}

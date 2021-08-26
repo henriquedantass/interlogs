@@ -9,9 +9,12 @@ import {
   Td,
   Switch,
 } from "@chakra-ui/react";
-import { dataTable } from "../../mocks/tableDataMock";
+import { useContext } from "react";
+import { dataContext } from "../../context/dataContext";
 
 export function TableComponent() {
+  const {data , media} = useContext(dataContext)
+
   return (
     <Box
       width="50%"
@@ -46,30 +49,38 @@ export function TableComponent() {
             </Th>
             <Th>
               <Text color="#000" fontSize="0.8rem">
-                Habilitar?
+                Media
               </Text>
             </Th>
+           <Th>
+               <Text color="#000" fontSize="0.8rem">
+                Habilitar?
+              </Text> 
+            </Th>            
           </Tr>
         </Thead>
         <Tbody>
-          {dataTable.map((item) => {
+          {data.map((item, index) => {
             return (
-              <Tr key={item.id}>
+              <Tr key={item.name}>
                 <Td>
-                  <Text color="#00000090">{item.description}</Text>
+                  <Text color="#00000090">Temperatura Mancal</Text>
                 </Td>
                 <Td>
-                  <Text color="#00000090">{item.tag}</Text>
+                  <Text color="#00000090">TT-01</Text>
                 </Td>
                 <Td>
-                  <Text color="#00000090">{item.metricUnity}</Text>
+                  <Text color="#00000090">ºC</Text>
                 </Td>
                 <Td>
-                  <Text color="#00000090">{item.equipment}</Text>
+                  <Text color="#00000090">{item.name}</Text>
                 </Td>
                 <Td>
-                  <Switch colorScheme="teal" size="lg" />
+                  <Text color="#00000090">{Math.round(media[index])}°C</Text>
                 </Td>
+                <Td>
+                  <Switch  colorScheme="teal" size="lg" />
+                </Td> 
               </Tr>
             );
           })}
